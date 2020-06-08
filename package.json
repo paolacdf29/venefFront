@@ -1,6 +1,6 @@
 {
-  "name": "carousel",
-  "version": "0.0.0",
+  "name": "venef",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -19,6 +19,11 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "ngx-owl-carousel": "^2.0.7",
+    "ngx-owl-carousel-o": "^2.1.1",
+    "owl.carousel": "^2.3.4",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

@@ -1,0 +1,65 @@
+<div class='container-fluid'>    
+
+    <div class="row bg-theme">
+        <div class="col-12">
+            <owl-carousel [options]="SlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" >  
+                <div class="item currency-box" *ngFor="let currency of currencies">  
+                    <h5> <i [class]="currency.icon"></i> {{currency.comp}}</h5>
+                    <h6>${{currency.precio}} {{currency.ppal}}</h6>
+                  </div>
+            </owl-carousel>  
+        </div>
+    </div>
+
+    <div class="row bigBanner align-items-center justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h1>Titulin</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, eius exercitationem. Quam quia unde nemo labore explicabo accusamus adipisci quod.</p>
+            <button type="button" class="btn btn-primary" routerLink='/cambiar'>Empezar a cambiar</button>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <img src="../../../assets/img/Plan-bro.svg" alt="">
+        </div>
+    </div>
+
+    <div class="row servicios">
+        <div class="col-12 text-center titulo-seccion">
+            <h2>Nuestros servicios</h2>
+        </div>
+        <div class="col-lg-6 col-sm-12 mt-5">
+            <div class="card servicios-box">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-3 img-slot">
+                        <div class="img-icon">
+                            <i class="far fa-credit-card"></i>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="card-body">
+                          <h5 class="card-title">Facil extracción</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mt-5">
+            <div class="card servicios-box">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-3 img-slot">
+                    <div class="img-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="card-body">
+                      <h5 class="card-title">Cambio de divisas</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+        
+</div>      

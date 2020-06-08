@@ -1,0 +1,27 @@
+[
+    {
+        "ppal": "BS", 
+        "comp": "BS/ARS", 
+        "precio": 1500, 
+        "icon": "fab fa-bitcoin"},
+    {
+        "ppal": "ARS", 
+        "comp": "BTC/ARS", 
+        "precio": 1168200, 
+        "icon": "fab fa-bitcoin"},
+    {
+        "ppal": "ARS", 
+        "comp": "XLM/ARS", 
+        "precio": 9.42, 
+        "icon": "fab fa-bitcoin"},
+    {
+        "ppal": "ARS", 
+        "comp": "EOS/ARS", 
+        "precio": 337, 
+        "icon": "fab fa-bitcoin"},
+    {
+        "ppal": "EUR", 
+        "comp": "ETH/EUR", 
+        "precio": 207, 
+        "icon": "fab fa-bitcoin"}
+  ]

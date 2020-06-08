@@ -1,0 +1,70 @@
+.titulo-seccion{
+    border-bottom: 2px groove #3981BF;
+}
+
+.bg-theme{
+    background-color: #0D0D0D;
+}
+
+// Currencies slider
+
+.currency-box{
+    height: 80px;
+    width:100%; 
+    text-align: center;
+    background-color: #0D0D0D;
+    padding-top: 10px;
+}
+
+.currency-box h5{
+    color: #578BF2;
+}
+
+.currency-box h6{
+    color: #3981BF;
+}
+
+// Banner principal
+
+.bigBanner{
+    background-color: #9CA1A6;
+    padding: 0 30px 0 30px
+
+}
+
+.bigBanner h1{
+    font-weight: 600;
+    color: white;
+}
+
+.bigBanner p{
+    max-width: 300px;
+}
+
+
+// Seccion de servicios
+
+.servicios{
+    margin: 120px 0 50px 0;
+}
+
+.servicios-box{
+    background-color: #D2D5D9;
+}
+
+// .servicios-box h5{
+//     color: white;
+// }
+
+.img-icon{
+    background-color: #3981BF;
+    color: white;
+    font-size: 35px;
+    padding:10px 15px 10px 15px; 
+    text-align: center;
+    border-radius: 10%;
+}
+
+.img-slot{
+    padding: 5%;
+}
