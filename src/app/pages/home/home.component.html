@@ -2,7 +2,7 @@
 
     <div class="row bg-theme">
         <div class="col-12">
-            <owl-carousel [options]="SlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" >  
+            <owl-carousel [options]="SlideOptions" [items]="currencies" [carouselClasses]="['owl-theme', 'sliding']" >  
                 <div class="item currency-box" *ngFor="let currency of currencies">  
                     <h5> <i [class]="currency.icon"></i> {{currency.comp}}</h5>
                     <h6>${{currency.precio}} {{currency.ppal}}</h6>
