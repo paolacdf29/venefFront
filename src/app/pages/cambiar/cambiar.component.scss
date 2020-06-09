@@ -1,0 +1,38 @@
+
+.tarjetero{
+    padding: 20px;
+    margin: 100px 0 100px 0;
+}
+
+.tarjeta{
+    border-radius: 5%;
+    background-color: #D2D5D9;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+}
+.tarjeta i{
+    font-size: 30px;
+    margin: 0 10px 0 10px;
+}
+.tarjeta img{
+    height: 70px;
+}
+.tarjeta p{
+    margin: 10px 0 10px 0;
+}
+.tarjeta:hover{
+    background-color: #9CA1A6;
+    font-weight: 700;
+    color: white;
+}
+
+.cajero{
+    background-color: #3981BF;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 0 100px 0;
+    color: white;
+}
+.cajero img{
+    height: 200px;
+}

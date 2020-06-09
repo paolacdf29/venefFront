@@ -3,11 +3,14 @@
 }
 
 .persona{
+    border: 1px outset black;
     text-align: center;
     margin: 100px 0 100px 0;
+    padding: 20px 0 20px 0;
 }
 .persona img{
     height: 150px;
+    border-radius: 50%;
 }
 .persona h4{
     margin-top: 20px;
