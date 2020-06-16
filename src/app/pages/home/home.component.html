@@ -1,16 +1,24 @@
 <div class='container-fluid'>    
-
-    <div class="row bg-theme">
-        <div class="col-12">
-            <owl-carousel [options]="SlideOptions" [items]="currencies" [carouselClasses]="['owl-theme', 'sliding']" >  
-                <div class="item currency-box" *ngFor="let currency of currencies">  
-                    <h5> <i [class]="currency.icon"></i> {{currency.comp}}</h5>
-                    <h6>${{currency.precio}} {{currency.ppal}}</h6>
+    <!-- El carousel de las monedas -->
+    <div class="row bg-theme align-items-center">
+        <div class="col-1">
+            <i class="fas fa-chevron-left" style="color: lightgray"></i>
+        </div>
+        <div class="col-10">
+            <owl-carousel [options]="SlideOptions" [items]="monedas.currencies" [carouselClasses]="['owl-theme', 'sliding']" >  
+                <div class="item currency-box" 
+                     *ngFor="let currency of monedas.currencies">  
+                    <h5 routerLink="/moneda/{{currency.ppal}}"> <i class="fab fa-bitcoin"></i> {{currency.ppal}}/{{currency.secnd}}</h5>
+                    <h6>${{currency.factor.toFixed(2)}} {{currency.secnd}}</h6>
                   </div>
             </owl-carousel>  
         </div>
+        <div class="col-1">
+            <i class="fas fa-chevron-right" style="color: lightgray"></i>
+        </div>
     </div>
 
+    <!-- El banner de presentacion -->
     <div class="row bigBanner align-items-center justify-content-center">
         <div class="col-lg-6 col-md-6 col-sm-12">
             <h1>Titulin</h1>
@@ -18,16 +26,17 @@
             <button type="button" class="btn btn-primary" routerLink='/cambiar'>Empezar a cambiar</button>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12">
-            <img src="../../../assets/img/Plan-bro.svg" alt="">
+            <img src="../../../assets/img/Plan-bro.svg" alt="" class="animated fadeIn">
         </div>
     </div>
-
+    
+    <!-- Las tarjetas de servicios -->
     <div class="row servicios">
         <div class="col-12 text-center titulo-seccion">
             <h2>Nuestros servicios</h2>
         </div>
         <div class="col-lg-6 col-sm-12 mt-5">
-            <div class="card servicios-box">
+            <div class="card servicios-box animated fadeIn">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-3 img-slot">
                         <div class="img-icon">
@@ -44,7 +53,7 @@
             </div>
         </div>
         <div class="col-lg-6 col-sm-12 mt-5">
-            <div class="card servicios-box">
+            <div class="card servicios-box animated fadeIn">
             <div class="row justify-content-center align-items-center">
                 <div class="col-3 img-slot">
                     <div class="img-icon">

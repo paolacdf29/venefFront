@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { MonedasService } from '../../services/monedas.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,22 +8,47 @@ import { MonedasService } from '../../services/monedas.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  //currencies: Observable<any[]>;  
-  currencies = [
-    {ppal: "BS", comp: "BS/ARS", precio: 1500, icon: "fab fa-bitcoin"},
-    {ppal: "ARS", comp: "BTC/ARS", precio: 1168200, icon: "fab fa-bitcoin"},
-    {ppal: "ARS", comp: "XLM/ARS", precio: 9.42, icon: "fab fa-bitcoin"},
-    {ppal: "ARS", comp: "EOS/ARS", precio: 337, icon: "fab fa-bitcoin"},
-    {ppal: "EUR", comp: "ETH/EUR", precio: 207, icon: "fab fa-bitcoin"}
-  ]
   
-  SlideOptions = { items: 3, dots: false, nav: false };  
-  CarouselOptions = { items: 3, dots: false, nav: false };  
+  SlideOptions = { 
+    items: 3, 
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      }
+    }, 
+    nav: false 
+  };  
+  CarouselOptions = { 
+    items: 3, 
+    dots: false, 
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: false 
+  };  
 
-  constructor(private monedas: MonedasService) { }
+  constructor(public monedas: MonedasService) { }
 
   ngOnInit() {
-    //this.currencies = this.monedas.getMonedas()
   }
+
 
 }

@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row monedasection justify-content-center">
+        <div class="col-8">
+        <h2>{{moneda}}</h2>
+        <div class="card mt-5 bgtrans shadow"
+             *ngFor='let item of currencies'
+             (click)="solicitaroperacion(item)"
+             routerLink='/cambiar'>
+             <p>
+                 <img src="../../../assets/img/banderas/{{item.ppal}}.svg" alt="{{item.ppal}}">  
+                 <i class="fas fa-chevron-right"></i>  
+                 <img src="../../../assets/img/banderas/{{item.secnd}}.svg" alt="{{item.secnd}}">
+                 <span *ngIf='item.factor >= 1'>Tasa: {{item.factor.toFixed(2)}} {{item.secnd}} por 1 {{item.ppal}}</span>
+                 <span *ngIf='item.factor < 1'>Tasa: {{(item.factor*100).toFixed(2)}} {{item.secnd}} por 100 {{item.ppal}}</span>
+             </p>
+        </div>
+        </div>
+    </div>
+</div>

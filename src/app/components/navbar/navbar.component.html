@@ -8,9 +8,15 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about">Equipo</a>
-      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Información
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/about">Equipo</a>
+          <a class="dropdown-item" routerLink="/info">Tarifas</a>
+          <a class="dropdown-item" routerLink="/about">Tarminos y condiciones</a>
+        </div>
       <li class="nav-item">
         <a class="nav-link" routerLink="/contacto">Contacto</a>
       </li>

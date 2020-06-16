@@ -1,0 +1,31 @@
+.monedasection{
+    background-color: #8836BF;
+    height: 500px;
+    padding: 100px 0 100px;
+}
+.monedasection h2{
+    color: white;
+}
+.monedasection p{
+    padding-top: 15px;
+    color: white;
+}
+
+.monedasection img{
+    height: 50px;
+    margin: 0 15px 0 15px;
+}
+
+.monedasection span{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.bgtrans{
+    background-color: transparentize($color: #0D0D0D, $amount: 0.5);
+}
+
+.bgtrans:hover{
+    background-color: transparentize($color: #0D0D0D, $amount: 0.3);
+
+}

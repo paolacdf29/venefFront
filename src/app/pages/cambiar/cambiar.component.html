@@ -5,27 +5,27 @@
         </div>
     </div>
     <div class="row tarjetero">
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6" *ngFor='let item of currencies'>
-            <div class="tarjeta" (click)="seleccionaCambio(item)">
-                <img src="../../../assets/img/banderas/{{item.from}}.svg" alt="{{item.from}}">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mt-5" *ngFor='let item of monedas.currencies'>
+            <div class="tarjeta animated slideInDown shadow border" 
+                 (click)="monedas.seleccionaCambio(item)"
+                 [ngClass]="{'cambio-seleccionado': item.seleccionado}">
+                <img src="../../../assets/img/banderas/{{item.ppal}}.svg" alt="{{item.ppal}}">
                 <i class="fas fa-chevron-right"></i>
-                <img src="../../../assets/img/banderas/{{item.to}}.svg" alt="{{item.to}}">
-                
+                <img src="../../../assets/img/banderas/{{item.secnd}}.svg" alt="{{item.secnd}}">
             </div>
         </div>
     </div>
 
     <div class="row justify-content-center ">
-        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 text-center cajero">
+        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 text-center cajero" *ngIf='monedas.currency'>
             <h4>Selecciona cuanto deseas transferir</h4>
             <img src="../../../assets/img/card-bro.svg" alt="">
-            <p>De : {{currency.from}} </p>
-            <p>A : {{currency.to}} </p>
+            <p>De : {{monedas.currency.ppal}} </p>
+            <p>A : {{monedas.currency.secnd}} </p>
             <form  #cajaForm="ngForm">
             <div class="form-group">
-                <input type="number" class="form-control" placeholder="Monto a cambiar" (input)="typeEvent($event.target.value)">
-                <label for="total">Monto a transferir</label>
-                <input type="number" class="form-control" id='total' disabled name='montotransf' [(ngModel)]="transferir">
+                <input type="number" class="form-control" placeholder="Monto a cambiar (en {{monedas.currency.ppal}} )" (input)="typeEvent($event.target.value)">
+                <p style="font-size: 30px;">Monto a transferir: {{transferir.toFixed(2)}} {{monedas.currency.secnd}}</p>
             </div>
             <button class="btn btn-dark">Enviar</button>
             </form>
